@@ -43,7 +43,7 @@ Now that you know what you’re dealing with, and maybe already found some leaks
 7. Token reuse (save a file of over 200 tokens and try them).
 8. Change the referrer.
 
-## Additional Notes and Tips:
+## Additional Notes and Tips
 1. Do the intelligence gathering phase: any info could help you (even if it’s out of scope.. you are just gathering info not breaking any rules).
 2. Ideally: understand roles, resources, and the functionality of the application, and the responses of each endpoint. Also, perform tests on each of the endpoints too. (sometimes it is not possible to test all endpoints, this is where the endpoints you’ve marked in step2 come to use)
 3. Headers are not just for manipulation. Certain values for the headers, or missing headers, can lead to security vulnerabilities, so don’t forget to look for those (see the [Secure Headers Project](https://owasp.org/www-project-secure-headers/) by OWASP).
