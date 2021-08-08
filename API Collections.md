@@ -3,7 +3,7 @@ I wrote this methodology as a guide for testing API collections summerizing many
 
 Any contribution is very appriciated, as well as any advice or comment.
 
-========================================================================================================================================================================
+==========================================================================================================
 # Methodology
 Before you start please familiarize yourself with the [OWASP Top 10 API Vulnerabilities](https://owasp.org/www-project-api-security/), and other types of vulnerabilities that you want to look for in APIs (like CORS and SSRF).
 
@@ -45,7 +45,7 @@ Now that you know what you’re dealing with, and maybe already found some leaks
 3. Headers are not just for manipulation. Certain values for the headers, or missing headers, can lead to security vulnerabilities, so don’t forget to look for those (see the [Secure Headers Project](https://owasp.org/www-project-secure-headers/) by OWASP).
 4. Management endpoints: Sometimes management endpoints are needed to be accessible via the Internet, make sure to check for them and test if they have the strong authentication mechanism, e.g. multi-factor. They can (and should) be exposed via different ports or hosts preferably on a different NIC and restricted subnet. Access to these endpoints should be restriceted by firewall rules or use of access control lists.
 
-=============================================================================================================================================================================
+==================================================================================================================
 
 ## Tools:
 - Burp suite with Extensions like “Authorize”, “JWT Attacker”, “Auto Repeater”, “Turbo intruder”. ⇒ ⇒ __The well-known web proxy__
