@@ -15,7 +15,7 @@ When it comes to APIs, this is almost the most important step. You can’t hack 
   - Look for different types of files.
 2. Parameters.
 
-**<h3>Tip1:</h3>** for endpoints enumeration use the `HEAD` method, it’s just faster and gives you the `status 200` you’re looking for. (But first make sure it works! Some APIs respond with “200” to any request with a method other than the intended one)
+<h3>Tip1:</h3> <span>for endpoints enumeration use the `HEAD` method, it’s just faster and gives you the `status 200` you’re looking for. (But first make sure it works! Some APIs respond with “200” to any request with a method other than the intended one)</span>
 
 **Tip2:** during this step, if the application you are testing has a mobile application, this can be a huge source of information. The mobile application will most likely request the APIs you are dealing with, so this could be an easy way to get many valid endpoints, after getting these it will also be easier to guess the rest.
 
