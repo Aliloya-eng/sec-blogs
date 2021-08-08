@@ -1,5 +1,5 @@
 - This guid is intended for ethical activities so please use it for ethical testing only.
-- I wrote this methodology as a guide for testing API collections summerizing many resources in addition to my own personal experience, and I hope it would be of great help for anyone who needs a starting point to test APIs -wether you are a penetration tester or a bug bounty hunter.
+- I wrote this methodology as a guide for testing API collections summerizing many resources in addition to my own personal experience. I wrote it as simple and as direct as possible to be available for every one to use it, dispite the level of experience, and I hope it would be of great help for anyone who needs a starting point to test APIs -wether you are a penetration tester or a bug bounty hunter.
 - Any contribution is very appriciated, as well as any advice or comment.
 
 ==================================================================================
