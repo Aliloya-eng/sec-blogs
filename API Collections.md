@@ -15,11 +15,10 @@ When it comes to APIs, this is almost the most important step. You can’t hack 
   - Look for different types of files.
 2. Parameters.
 
-<h3>Tip1:</h3> <span>for endpoints enumeration use the `HEAD` method, it’s just faster and gives you the `status 200` you’re looking for. (But first make sure it works! Some APIs respond with “200” to any request with a method other than the intended one)</span>
+<h3 style="text-decoration: underline; display: inline;">Tip1:</h3><span>for endpoints enumeration use the `HEAD` method, it’s just faster and gives you the `status 200` you’re looking for. (But first make sure it works! Some APIs respond with “200” to any request with a method other than the intended one)</span>
+<h3 style="text-decoration: underline; display: inline;">Tip2:</h3><span>during this step, if the application you are testing has a mobile application, this can be a huge source of information. The mobile application will most likely request the APIs you are dealing with, so this could be an easy way to get many valid endpoints, after getting these it will also be easier to guess the rest.</span>
+<h3 style="text-decoration: underline; display: inline;">Note1:</h3><span>you need to build one wordlist for endpoints and a whole other one for parameter names (or download them from the web). Go for words that are as suitable as possible to the API that you are testing –example: for banks your wordlist should include “accounts”, ”clients”, ”users”, ”balance” and so on, you got the idea.</span>
 
-**Tip2:** during this step, if the application you are testing has a mobile application, this can be a huge source of information. The mobile application will most likely request the APIs you are dealing with, so this could be an easy way to get many valid endpoints, after getting these it will also be easier to guess the rest.
-
-**Note1:** you need to build one wordlist for endpoints and a whole other one for parameter names (or download them from the web). Go for words that are as suitable as possible to the API that you are testing –example: for banks your wordlist should include “accounts”, ”clients”, ”users”, ”balance” and so on, you got the idea.
 
 ## STEP-2- Know what you are dealing with
 Now that you have all the endpoints that you can request, and the parameters you need to successfully call them, well, go ahead and call them! In this step you need to try to understand what you are dealing with. So, get a normal healthy response from every endpoint. To ease your next phase I suggest you take a look at the responses and look for any “Excessive Data Exposure” in other words, what information in the response that could be sensitive and/or should not be there? Did you find something? Well! You just found one of the Top 10 OWASP API Vulnerabilities. Along with that, I also suggest you mark the endpoints that you find interesting so that you get back to them later to look for other vulnerabilities.
