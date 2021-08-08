@@ -48,8 +48,8 @@ Now that you know what you’re dealing with, and maybe already found some leaks
 ==================================================================================
 
 ## Tools:
-- Burp suite with Extensions like “Authorize”, “JWT Attacker”, “Auto Repeater”, “Turbo intruder”. ⇒ ⇒ _The well-known web proxy_
-- Postman (proxy it throw burp) ⇒ ⇒ API _development and testing platform, with GUI_.
+- [Burp suite](https://portswigger.net/burp/communitydownload) with Extensions like “Authorize”, “JWT Attacker”, “Auto Repeater”, “Turbo intruder”. ⇒ ⇒ _The well-known web proxy_
+- [Postman](https://www.postman.com/) (proxy it throw burp) ⇒ ⇒ API _development and testing platform, with GUI_.
 - [MindAPI](https://dsopas.github.io/MindAPI/play/) ⇒ ⇒ _API testing framework (similar to OSINT)_
 - [Header scanner](https://securityheaders.com/) ⇒ ⇒ _Tool to scan for security headers_
 - [Astra](https://github.com/flipkart-incubator/Astra) ⇒ ⇒ _Automated tool for web application and APIs scanning, with GUI_
