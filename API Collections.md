@@ -16,7 +16,9 @@ When it comes to APIs, this is almost the most important step. You can’t hack 
 2. Parameters.
 
 **Tip1:** for endpoints enumeration use the `HEAD` method, it’s just faster and gives you the `status 200` you’re looking for. (But first make sure it works! Some APIs respond with “200” to any request with a method other than the intended one)
+
 **Tip2:** during this step, if the application you are testing has a mobile application, this can be a huge source of information. The mobile application will most likely request the APIs you are dealing with, so this could be an easy way to get many valid endpoints, after getting these it will also be easier to guess the rest.
+
 **Note1:** you need to build one wordlist for endpoints and a whole other one for parameter names (or download them from the web). Go for words that are as suitable as possible to the API that you are testing –example: for banks your wordlist should include “accounts”, ”clients”, ”users”, ”balance” and so on, you got the idea.
 
 ## STEP-2- Know what you are dealing with
