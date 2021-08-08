@@ -4,10 +4,10 @@ I wrote this methodology as a guide for testing API collections summerizing many
 Any contribution is very appriciated, as well as any advice or comment.
 
 ========================================================================================================================================================================
-#Methodology
+# Methodology
 Before you start please familiarize yourself with the [OWASP Top 10 API Vulnerabilities](https://owasp.org/www-project-api-security/), and other types of vulnerabilities that you want to look for in APIs (like CORS and SSRF).
 
-##STEP-1- Fuzzing and enumeration (Black box / Bug bounty hunting)
+## STEP-1- Fuzzing and enumeration (Black box / Bug bounty hunting)
 When it comes to APIs, this is almost the most important step. You can’t hack what you don't know of, so first use your favorite fuzzing tool to fuzz the following in order:
 1. Endpoints (basically URIs/subdirectories), also:
   - Look for different versions of the APIs.
@@ -17,19 +17,19 @@ When it comes to APIs, this is almost the most important step. You can’t hack 
 **TIP1:** for endpoints enumeration use the `HEAD` method, it’s just faster and gives you the `status 200` you’re looking for. (But first make sure it works! Some APIs respond with “200” to any request with a method other than the intended one)
 **Note1:** you need to build one wordlist for endpoints and a whole other one for parameter names (or download them from the web). Go for words that are as suitable as possible to the API that you are testing –example: for banks your wordlist should include “accounts”, ”clients”, ”users”, ”balance” and so on, you got the idea.
 
-##STEP-2- Know what you are dealing with
+## STEP-2- Know what you are dealing with
 Now that you have all the endpoints that you can request, and the parameters you need to successfully call them, well, go ahead and call them! In this step you need to try to understand what you are dealing with. So, get a normal healthy response from every endpoint. To ease your next phase I suggest you take a look at the responses and look for any “Excessive Data Exposure” in other words, what information in the response that could be sensitive and/or should not be there? Did you find something? Well! You just found one of the Top 10 OWASP API Vulnerabilities. Along with that, I also suggest you mark the endpoints that you find interesting so that you get back to them later to look for other vulnerabilities.
 
-##STEP-3- Attack and Manipulation
+## STEP-3- Attack and Manipulation
 Now that you know what you’re dealing with, and maybe already found some leaks, it’s time for the dirty stuff.
-###Where do you want to look?
+### Where do you want to look?
 - Methods: replace post ⬄ delete // post ⬄ get // post ⬄ put // delete ⬄ put...
 - Headers.
 - Parameter (names & values)
   1. Change.
   2. Bypass/delete.
   3. Duplicate.
-###What do you want to try?
+### What do you want to try?
 1. Values/payloads with different and not expected length, range, format, type…
 2. Overflow.
 3. Rate limiting (if allowed).
@@ -39,7 +39,7 @@ Now that you know what you’re dealing with, and maybe already found some leaks
 7. Token reuse (save a file of over 200 tokens and try them).
 8. Change the referrer.
 
-##Additional Notes and Tips:
+## Additional Notes and Tips:
 1. Do the intelligence gathering phase: any info could help you (even if it’s out of scope.. you are just gathering info not breaking any rules).
 2. Ideally: understand roles, resources, and the functionality of the application, and the responses of each endpoint. Also, perform tests on each of the endpoints too. (sometimes it is not possible to test all endpoints, this is where the endpoints you’ve marked in step2 come to use)
 3. Headers are not just for manipulation. Certain values for the headers, or missing headers, can lead to security vulnerabilities, so don’t forget to look for those (see the [Secure Headers Project](https://owasp.org/www-project-secure-headers/) by OWASP).
@@ -47,7 +47,7 @@ Now that you know what you’re dealing with, and maybe already found some leaks
 
 =============================================================================================================================================================================
 
-##Tools:
+## Tools:
 - Burp suite with Extensions like “Authorize”, “JWT Attacker”, “Auto Repeater”, “Turbo intruder”. ⇒ ⇒ __The well-known web proxy__
 - Postman (proxy it throw burp) ⇒ ⇒ API __development and testing platform, with GUI__.
 - [MindAPI](https://dsopas.github.io/MindAPI/play/) ⇒ ⇒ __API testing framework (similar to OSINT)__
@@ -63,14 +63,14 @@ Now that you know what you’re dealing with, and maybe already found some leaks
 - [Js-scan](https://github.com/zseano/JS-Scan) ⇒ ⇒ __Tool to extract APIs from JS files__
 - [Trufflehog](https://github.com/trufflesecurity/truffleHog) ⇒ ⇒ __An effective tool that search Git repos and commit histories for secrets__ 
 
-##Advance topics: (for later editions)
+## Advance topics: (for later editions)
 - Ssl
 - JWT
 - API keys
 - Mobile applications
 - Git repos
 
-##References:
+## References:
 - https://medium.com/@Johne_Jacob/api-penetration-testing-things-to-be-noted-14ec0a170222
 - https://owasp.org/www-project-api-security/
 - https://github.com/OWASP/API-Security
