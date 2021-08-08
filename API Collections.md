@@ -1,3 +1,4 @@
+# API Security Testing Guide
 - This guid is intended for ethical activities so please use it for ethical testing only.
 - I wrote this methodology as a guide for testing API collections summerizing many resources in addition to my own personal experience. I wrote it as simple and as direct as possible to be available for every one to use it, dispite the level of experience, and I hope it would be of great help for anyone who needs a starting point to test APIs -wether you are a penetration tester or a bug bounty hunter.
 - Any contribution is very appriciated, as well as any advice or comment.
@@ -46,22 +47,20 @@ Now that you know what you’re dealing with, and maybe already found some leaks
 3. Headers are not just for manipulation. Certain values for the headers, or missing headers, can lead to security vulnerabilities, so don’t forget to look for those (see the [Secure Headers Project](https://owasp.org/www-project-secure-headers/) by OWASP).
 4. Management endpoints: Sometimes management endpoints are needed to be accessible via the Internet, make sure to check for them and test if they have the strong authentication mechanism, e.g. multi-factor. They can (and should) be exposed via different ports or hosts preferably on a different NIC and restricted subnet. Access to these endpoints should be restriceted by firewall rules or use of access control lists.
 
-==================================================================================
-
 ## Tools
 I devided the tools according to the previous steps
-__Your Environment (along with all steps):__
+**Your Environment (along with all steps):**
 - [Burp suite](https://portswigger.net/burp/communitydownload) with Extensions like “Authorize”, “JWT Attacker”, “Auto Repeater”, “Turbo intruder”. ⇒ ⇒ _The well-known web proxy_
 - [Postman](https://www.postman.com/) (proxy it throw burp) ⇒ ⇒ API _development and testing platform, with GUI_.
 - [MindAPI](https://dsopas.github.io/MindAPI/play/) ⇒ ⇒ _API testing framework (similar to OSINT)_
-__Fuzzing and Enumeration:__
+**Fuzzing and Enumeration:**
 - API word lists ⇒ ⇒ _Creat your own or download wordlists from the web_
 - [FuzzAPI](https://github.com/Fuzzapi/fuzzapi) ⇒ ⇒ _Fuuzing tool for APIs, with GUI_
 - [Js-scan](https://github.com/zseano/JS-Scan) ⇒ ⇒ _Tool to extract APIs from JS files_
 - [Trufflehog](https://github.com/trufflesecurity/truffleHog) ⇒ ⇒ _An effective tool that search Git repos and commit histories for secrets_ 
 - [Parameth](https://github.com/maK-/parameth) ⇒ ⇒ _Parameter fuzzing tool_
 - [Swagger](https://swagger.io/) ⇒ ⇒ _API development platform with many tools and also valuable blog posts that can help you_
-__Attack:__
+**Attack:**
 - [Astra](https://github.com/flipkart-incubator/Astra) ⇒ ⇒ _Automated tool for web application and APIs scanning, with GUI_
 - [Vooki](https://www.vegabird.com/vooki/) ⇒ ⇒ _Automated tool for web application and APIs scanning, with GUI_
 - [Header scanner](https://securityheaders.com/) ⇒ ⇒ _Tool to scan for security headers_
