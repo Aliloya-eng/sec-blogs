@@ -15,11 +15,11 @@ When it comes to APIs, this is almost the most important step. You can’t hack 
   - Look for different types of files.
 2. Parameters.
 
-**Tip1:** for endpoints enumeration use the `HEAD` method, it’s just faster and gives you the `status 200` you’re looking for. (But first make sure it works! Some APIs respond with “200” to any request with a method other than the intended one)
+**_Tip1:_** for endpoints enumeration use the `HEAD` method, it’s just faster and gives you the `status 200` you’re looking for. (But first make sure it works! Some APIs respond with “200” to any request with a method other than the intended one)
 
-**Tip2:** during this step, if the application you are testing has a mobile application, this can be a huge source of information. The mobile application will most likely request the APIs you are dealing with, so this could be an easy way to get many valid endpoints, after getting these it will also be easier to guess the rest.
+**_Tip2:_** during this step, if the application you are testing has a mobile application, this can be a huge source of information. The mobile application will most likely request the APIs you are dealing with, so this could be an easy way to get many valid endpoints, after getting these it will also be easier to guess the rest.
 
-**Note1:** you need to build one wordlist for endpoints and a whole other one for parameter names (or download them from the web). Go for words that are as suitable as possible to the API that you are testing –example: for banks your wordlist should include “accounts”, ”clients”, ”users”, ”balance” and so on, you got the idea.
+**_Note1:_** you need to build one wordlist for endpoints and a whole other one for parameter names (or download them from the web). Go for words that are as suitable as possible to the API that you are testing –example: for banks your wordlist should include “accounts”, ”clients”, ”users”, ”balance” and so on, you got the idea.
 
 ## STEP-2- Know what you are dealing with
 Now that you have all the endpoints that you can request, and the parameters you need to successfully call them, well, go ahead and call them! In this step you need to try to understand what you are dealing with. So, get a normal healthy response from every endpoint. To ease your next phase I suggest you take a look at the responses and look for any “Excessive Data Exposure” in other words, what information in the response that could be sensitive and/or should not be there? Did you find something? Well! You just found one of the Top 10 OWASP API Vulnerabilities. Along with that, I also suggest you mark the endpoints that you find interesting so that you get back to them later to look for other vulnerabilities.
@@ -51,12 +51,12 @@ Now that you know what you’re dealing with, and maybe already found some leaks
 
 ## Tools
 
-**Your Environment (along with all steps):**
+**_Your Environment (along with all steps):_**
 - [Burp suite](https://portswigger.net/burp/communitydownload) with Extensions like “Authorize”, “JWT Attacker”, “Auto Repeater”, “Turbo intruder”. ⇒ ⇒ _The well-known web proxy_
 - [Postman](https://www.postman.com/) (proxy it throw burp) ⇒ ⇒ API _development and testing platform, with GUI_.
 - [MindAPI](https://dsopas.github.io/MindAPI/play/) ⇒ ⇒ _API testing framework (similar to OSINT)_
 
-**Fuzzing and Enumeration tools:**
+**_Fuzzing and Enumeration tools:_**
 - API word lists ⇒ ⇒ _Creat your own or download wordlists from the web_
 - [FuzzAPI](https://github.com/Fuzzapi/fuzzapi) ⇒ ⇒ _Fuuzing tool for APIs, with GUI_
 - [Js-scan](https://github.com/zseano/JS-Scan) ⇒ ⇒ _Tool to extract APIs from JS files_
@@ -64,7 +64,7 @@ Now that you know what you’re dealing with, and maybe already found some leaks
 - [Parameth](https://github.com/maK-/parameth) ⇒ ⇒ _Parameter fuzzing tool_
 - [Swagger](https://swagger.io/) ⇒ ⇒ _API development platform with many tools and also valuable blog posts that can help you_
 
-**Attack tools:**
+**_Attack tools:_**
 - [Astra](https://github.com/flipkart-incubator/Astra) ⇒ ⇒ _Automated tool for web application and APIs scanning, with GUI_
 - [Vooki](https://www.vegabird.com/vooki/) ⇒ ⇒ _Automated tool for web application and APIs scanning, with GUI_
 - [Header scanner](https://securityheaders.com/) ⇒ ⇒ _Tool to scan for security headers_
