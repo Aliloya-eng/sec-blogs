@@ -24,7 +24,7 @@ Now that you have all the endpoints that you can request, and the parameters you
 ## STEP-3- Attack and Manipulation
 Now that you know what you’re dealing with, and maybe already found some leaks, it’s time for the dirty stuff.
 ### Where do you want to look?
-- Methods: replace post ⬄ delete // post ⬄ get // post ⬄ put // delete ⬄ put...
+- Methods: replace `post` ⬄ `delete` // `post` ⬄ `get` // `post` ⬄ `put` // `delete` ⬄ `put`...
 - Headers.
 - Parameter (names & values)
   1. Change.
@@ -50,19 +50,19 @@ Now that you know what you’re dealing with, and maybe already found some leaks
 
 ## Tools:
 - Burp suite with Extensions like “Authorize”, “JWT Attacker”, “Auto Repeater”, “Turbo intruder”. ⇒ ⇒ __The well-known web proxy__
-- Postman (proxy it throw burp) ⇒ ⇒ API __development and testing platform, with GUI__.
-- [MindAPI](https://dsopas.github.io/MindAPI/play/) ⇒ ⇒ __API testing framework (similar to OSINT)__
-- [Header scanner](https://securityheaders.com/) ⇒ ⇒ __Tool to scan for security headers__
-- [Astra](https://github.com/flipkart-incubator/Astra) ⇒ ⇒ __Automated tool for web application and APIs scanning, with GUI__
-- [FuzzAPI](https://github.com/Fuzzapi/fuzzapi) ⇒ ⇒ __Fuuzing tool for APIs, with GUI__
-- [JWT](https://jwt.io/) ⇒ ⇒ __Website for decoding and dehashing JWTs (JSON Web Tokens)__
-- [sqlmap](https://sqlmap.org/) ⇒ ⇒ __The well-known sql injection scanner__
-- [Vooki](https://www.vegabird.com/vooki/) ⇒ ⇒ __Automated tool for web application and APIs scanning, with GUI__
-- API word lists ⇒ ⇒ __Creat or download wordlists from the web__
-- [Swagger](https://swagger.io/) ⇒ ⇒ __API development platform with many tools and also valuable blog posts that can help you__
-- [Parameth](https://github.com/maK-/parameth) ⇒ ⇒ __Parameter fuzzing tool__
-- [Js-scan](https://github.com/zseano/JS-Scan) ⇒ ⇒ __Tool to extract APIs from JS files__
-- [Trufflehog](https://github.com/trufflesecurity/truffleHog) ⇒ ⇒ __An effective tool that search Git repos and commit histories for secrets__ 
+- Postman (proxy it throw burp) ⇒ ⇒ API _development and testing platform, with GUI_.
+- [MindAPI](https://dsopas.github.io/MindAPI/play/) ⇒ ⇒ _API testing framework (similar to OSINT)_
+- [Header scanner](https://securityheaders.com/) ⇒ ⇒ _Tool to scan for security headers_
+- [Astra](https://github.com/flipkart-incubator/Astra) ⇒ ⇒ _Automated tool for web application and APIs scanning, with GUI_
+- [FuzzAPI](https://github.com/Fuzzapi/fuzzapi) ⇒ ⇒ _Fuuzing tool for APIs, with GUI_
+- [JWT](https://jwt.io/) ⇒ ⇒ _Website for decoding and dehashing JWTs (JSON Web Tokens)_
+- [sqlmap](https://sqlmap.org/) ⇒ ⇒ _The well-known sql injection scanner_
+- [Vooki](https://www.vegabird.com/vooki/) ⇒ ⇒ _Automated tool for web application and APIs scanning, with GUI_
+- API word lists ⇒ ⇒ _Creat or download wordlists from the web_
+- [Swagger](https://swagger.io/) ⇒ ⇒ _API development platform with many tools and also valuable blog posts that can help you_
+- [Parameth](https://github.com/maK-/parameth) ⇒ ⇒ _Parameter fuzzing tool_
+- [Js-scan](https://github.com/zseano/JS-Scan) ⇒ ⇒ _Tool to extract APIs from JS files_
+- [Trufflehog](https://github.com/trufflesecurity/truffleHog) ⇒ ⇒ _An effective tool that search Git repos and commit histories for secrets_ 
 
 ## Advance topics: (for later editions)
 - Ssl
