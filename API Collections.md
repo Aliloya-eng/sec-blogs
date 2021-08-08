@@ -48,14 +48,13 @@ Now that you know what you’re dealing with, and maybe already found some leaks
 4. Management endpoints: Sometimes management endpoints are needed to be accessible via the Internet, make sure to check for them and test if they have the strong authentication mechanism, e.g. multi-factor. They can (and should) be exposed via different ports or hosts preferably on a different NIC and restricted subnet. Access to these endpoints should be restriceted by firewall rules or use of access control lists.
 
 ## Tools
-I devided the tools according to the previous steps
 
 **Your Environment (along with all steps):**
 - [Burp suite](https://portswigger.net/burp/communitydownload) with Extensions like “Authorize”, “JWT Attacker”, “Auto Repeater”, “Turbo intruder”. ⇒ ⇒ _The well-known web proxy_
 - [Postman](https://www.postman.com/) (proxy it throw burp) ⇒ ⇒ API _development and testing platform, with GUI_.
 - [MindAPI](https://dsopas.github.io/MindAPI/play/) ⇒ ⇒ _API testing framework (similar to OSINT)_
 
-**Fuzzing and Enumeration:**
+**Fuzzing and Enumeration tools:**
 - API word lists ⇒ ⇒ _Creat your own or download wordlists from the web_
 - [FuzzAPI](https://github.com/Fuzzapi/fuzzapi) ⇒ ⇒ _Fuuzing tool for APIs, with GUI_
 - [Js-scan](https://github.com/zseano/JS-Scan) ⇒ ⇒ _Tool to extract APIs from JS files_
@@ -63,7 +62,7 @@ I devided the tools according to the previous steps
 - [Parameth](https://github.com/maK-/parameth) ⇒ ⇒ _Parameter fuzzing tool_
 - [Swagger](https://swagger.io/) ⇒ ⇒ _API development platform with many tools and also valuable blog posts that can help you_
 
-**Attack:**
+**Attack tools:**
 - [Astra](https://github.com/flipkart-incubator/Astra) ⇒ ⇒ _Automated tool for web application and APIs scanning, with GUI_
 - [Vooki](https://www.vegabird.com/vooki/) ⇒ ⇒ _Automated tool for web application and APIs scanning, with GUI_
 - [Header scanner](https://securityheaders.com/) ⇒ ⇒ _Tool to scan for security headers_
