@@ -63,7 +63,7 @@ Now that you know what you’re dealing with, and maybe already found some leaks
 - [Js-scan](https://github.com/zseano/JS-Scan) ⇒ ⇒ _Tool to extract APIs from JS files_
 - [Trufflehog](https://github.com/trufflesecurity/truffleHog) ⇒ ⇒ _An effective tool that search Git repos and commit histories for secrets_ 
 
-## Advance topics: (for later editions)
+## Advance topics: (for contributors and later editions on API testing)
 - Ssl
 - JWT
 - API keys
