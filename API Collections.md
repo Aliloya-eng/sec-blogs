@@ -10,7 +10,7 @@ Before you start please familiarize yourself with the [OWASP Top 10 API Vulnerab
 
 ## STEP-1- Fuzzing and enumeration (Black box / Bug bounty hunting)
 When it comes to APIs, this is almost the most important step. You can’t hack what you don't know of, so first use your favorite fuzzing tool to fuzz the following in order:
-1. Endpoints (basically URIs/subdirectories), also:
+1. Endpoints: endpoints are usually url subdirectories, but they can also be in the form of different functions called in the body of the request for the same directory
   - Look for different versions of the APIs.
   - Look for different types of files.
 2. Parameters.
