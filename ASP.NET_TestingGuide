@@ -1,43 +1,43 @@
-# Enumeration
-Directories
-C:\Windows\System32
-\\Host\C$\Windows\System32
-\\.\C:\Windows\System32
-\\?\C:\Windows\System32
-\\?\UNC\Host\C$\Windows\System32
-C:\Windows\hh.exe == C:\Windows:$I30:$INDEX_ALLOCATION\hh.exe
-C:\Windows\notepad.exe == C:\Windows\notepad.exe::$DATA
-FileName.aspx == FileName.aspx:.jpg
-web.config
-http://hostname/*Resource.axd?d=<resourceId>&t=<timestamp>
-Files
-.asp
-.aspx
-.ashx
-.xsd
-.disco
-.discomap
-.wsdl
-.wadl
-.asmx
-.xml
-.config
-.zip
-.txt
-Techniques
-Information disclosure
-Look for files
-Requests and responses
-Error pages
-Urls
-Obfuscated strings
-short name scanning: https://github.com/irsdl/IIS-ShortName-Scanner 
-java –jar iis_shortname_scanner.jar [2=SHOW_PROGRESS] [20=THREADS] “TARGET-URL” > [OUT]
-ps: ignore “global”, “master”, “default”, “aspnet”
-Viewstate
-Remote debugging
-since ASP.NET is a compiled application, it has certain debugging features. Microsoft allows you to use a remote debugger to work on a debug version of the application.  If this port is open on the Internet and is protected by a simple password, or there is no password at all, then it is possible to pick up a debugger
-SMTP Header Injection
+
+## Enumeration
+
+### Directories
+- C:\Windows\System32
+- \\Host\C$\Windows\System32
+- \\.\C:\Windows\System32
+- \\?\C:\Windows\System32
+- \\?\UNC\Host\C$\Windows\System32
+- C:\Windows\hh.exe == C:\Windows:$I30:$INDEX_ALLOCATION\hh.exe
+- C:\Windows\notepad.exe == C:\Windows\notepad.exe::$DATA
+- FileName.aspx == FileName.aspx:.jpg
+- web.config
+- http://hostname/*Resource.axd?d=<resourceId>&t=<timestamp>
+### Files Extensions
+- .asp
+- .aspx
+- .ashx
+- .xsd
+- .disco
+- .discomap
+- .wsdl
+- .wadl
+- .asmx
+- .xml
+- .config
+- .zip
+- .txt
+
+## Techniques
+
+### Short Names
+[IIS-ShortName-Scanner](https://github.com/irsdl/IIS-ShortName-Scanner)
+`java –jar iis_shortname_scanner.jar [2=Show_Progress] [20=Threads] [Target_URL] > [OutFile]`
+>PS. ignore “global”, “master”, “default”, “aspnet” from results
+
+### Viewstate
+### Remote debugging
+Since ASP.NET is a compiled application, it has certain debugging features. Microsoft allows you to use a remote debugger to work on a debug version of the application.  If this port is open on the Internet and is protected by a simple password, or there is no password at all, then it is possible to pick up a debugger session
+### SMTP Header Injection
 No validation of the value that falls in the “To” header, it is possible to redirect the letter to another recipient. But that would be too simple and obvious, so validation occurs already at the .Net level. However, if you introduce a new Reply-To header — the answer address, many forms such as “Forgotten Password” often take the sending address from it, thus it is enough to embed carriage return and line feed characters and get the workload.
 From: rth@bieberdorf.edu (R.T. Hood)
 To: tmh@immense-isp.com/r/nReply-to:hack@hack.ru
@@ -51,15 +51,8 @@ Reply-To: hack@hack.ru
 Date: Tue, Mar 18199714:36:14 PST
 Message-Id: <rth031897143614-00000298@mail.bieberdorf.edu>
 
-
-CSRF
-A vulnerability was found that allows to bypass the protection from CSRF. It was necessary to simply use a string much smaller than the original one as a token.
-Normal token: <inputtype="hidden" name="__RequestVerificationToken" value="CIhXcKin7XcwYn8Y1hNVgP5eOOhAMn37dnZtFzziOqhflM423Z5JKkVPciRopfgcPau5tj" />
-Vulnerable Token: <inputtype="hidden" name="__RequestVerificationToken" value="ovomyQnYPxvPXfdxrjO1JEce3zPvGn" />
-
-XXE in DocX
-padding oracle (cookies / viewstate …)
-session management
+### XXE in DocX
+### padding oracle (cookies / viewstate …)
 Injection (sql with sqlNinja, js, html…)
 NUL:  /  CON:  /  AUX:  /  PRN:  /   %%
 Endings: name = name… = name \\\
