@@ -10,7 +10,6 @@
 - C:\Windows\hh.exe == C:\Windows:$I30:$INDEX_ALLOCATION\hh.exe
 - C:\Windows\notepad.exe == C:\Windows\notepad.exe::$DATA
 - FileName.aspx == FileName.aspx:.jpg
-- web.config
 - http://hostname/*Resource.axd?d=<resourceId>&t=<timestamp>
 ### Files Extensions
 - .asp
