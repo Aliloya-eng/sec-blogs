@@ -45,21 +45,21 @@ Since ASP.NET is a compiled application, it has certain debugging features. Micr
 No validation of the value that falls in the “To” header, it is possible to redirect the letter to another recipient. But that would be too simple and obvious, so validation occurs already at the .Net level. However, if you introduce a new Reply-To header — the answer address, many forms such as “Forgotten Password” often take the sending address from it, thus it is enough to embed carriage return and line feed characters and get the workload.
 
 >From: rth@bieberdorf.edu (R.T. Hood)<br>
->To: tmh@immense-isp.com/r/nReply-to:hack@hack.ru
->Date: Tue, Mar 18199714:36:14 PST
->Message-Id: <rth031897143614-00000298@mail.bieberdorf.edu>
->...
->В итоге будет внедрен новый заголовок:
->From: rth@bieberdorf.edu (R.T. Hood)
->To: tmh@immense-isp.com
->Reply-To: hack@hack.ru
->Date: Tue, Mar 18199714:36:14 PST
->Message-Id: <rth031897143614-00000298@mail.bieberdorf.edu>
+>To: tmh@immense-isp.com/r/nReply-to:hack@hack.ru<br>
+>Date: Tue, Mar 18199714:36:14 PST<br>
+>Message-Id: <rth031897143614-00000298@mail.bieberdorf.edu><br>
+>...<br>
+>В итоге будет внедрен новый заголовок:<br>
+>From: rth@bieberdorf.edu (R.T. Hood)<br>
+>To: tmh@immense-isp.com<br>
+>Reply-To: hack@hack.ru<br>
+>Date: Tue, Mar 18199714:36:14 PST<br>
+>Message-Id: <rth031897143614-00000298@mail.bieberdorf.edu><br>
 ### Additional .NET-Specific Tricks
 1. Canonicalization attack
-  - Using environment variables to represent path - e.g. %windir%notepad.exe
-  - Trailing “.” - e.g. C:wondowsnotepad.exe.
-  - Create file - \\URL\<name>		\\URL\pipe\<name>
+   - Using environment variables to represent path - e.g. %windir%notepad.exe
+   - Trailing “.” - e.g. C:wondowsnotepad.exe.
+   - Create file - \\URL\<name>		\\URL\pipe\<name>
 2. LINQ injection
 3. Hash collusion: https://github.com/HybrisDisaster/aspHashDoS
 #### Not-.NET-Specific
