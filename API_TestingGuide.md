@@ -37,7 +37,7 @@ Now that you know what you’re dealing with, and maybe already found some leaks
 1. Values/payloads with different and not expected length, range, format, type…
 2. Overflow.
 3. Rate limiting (if allowed).
-4. XXE: changing the content type to `application/xml`, add XML request body and see how request respond. If it's throwing XML based error you can try for XML Entity Attacks.
+4. XXE: changing the content type to `application/xml`, add XML request body and see how the server responds. If it's throwing XML based error you can try for XML Entity Attacks.
 5. File uploads.
 6. Injection.
 7. Token reuse (save a file of over 200 tokens and try them).
@@ -57,10 +57,10 @@ Now that you know what you’re dealing with, and maybe already found some leaks
 - [MindAPI](https://dsopas.github.io/MindAPI/play/) ⇒ ⇒ _API testing framework (similar to OSINT)_
 
 **_Fuzzing and Enumeration tools:_**
-- API word lists ⇒ ⇒ _Creat your own or download wordlists from the web_
+- API word lists ⇒ ⇒ _Create your own or download wordlists from the web_
 - [FuzzAPI](https://github.com/Fuzzapi/fuzzapi) ⇒ ⇒ _Fuuzing tool for APIs, with GUI_
 - [Js-scan](https://github.com/zseano/JS-Scan) ⇒ ⇒ _Tool to extract APIs from JS files_
-- [Trufflehog](https://github.com/trufflesecurity/truffleHog) ⇒ ⇒ _An effective tool that search Git repos and commit histories for secrets_ 
+- [Trufflehog](https://github.com/trufflesecurity/truffleHog) ⇒ ⇒ _An effective tool that searches Git repos and commits histories for secrets_ 
 - [Parameth](https://github.com/maK-/parameth) ⇒ ⇒ _Parameter fuzzing tool_
 - [Swagger](https://swagger.io/) ⇒ ⇒ _API development platform with many tools and also valuable blog posts that can help you_
 
