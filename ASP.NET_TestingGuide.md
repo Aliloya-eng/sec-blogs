@@ -62,7 +62,7 @@ No validation of the value that falls in the “To” header, it is possible to 
    - Create file - \\URL\<name>		\\URL\pipe\<name>
 2. LINQ injection
 3. Hash collusion: https://github.com/HybrisDisaster/aspHashDoS
-#### Not-.NET-Specific
+### Not-.NET-Specific
 1. XXE in DocX files
 2. Padding Oracle (cookies / viewstate …)
 3. Injection (sql with sqlNinja, js, html…)
