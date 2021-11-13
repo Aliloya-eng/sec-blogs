@@ -37,23 +37,23 @@ Now that you know what you’re dealing with, and maybe already found some leaks
 1. Values/payloads with different and not expected length, range, format, type…
 2. Overflow.
 3. Rate limiting (if allowed).
-4. XXE: changing the content type to `application/xml`, add XML request body and see how request respond. If its throwing XML based error you can try for XML Entity Attacks.
+4. XXE: changing the content type to `application/xml`, add XML request body and see how request respond. If it's throwing XML based error you can try for XML Entity Attacks.
 5. File uploads.
 6. Injection.
 7. Token reuse (save a file of over 200 tokens and try them).
 8. Change the referrer.
 
 ## Additional Notes and Tips
-1. Do the intelligence gathering phase: any info could help you (even if it’s out of scope.. you are just gathering info not breaking any rules).
+1. Do the intelligence-gathering phase: any info could help you (even if it’s out of scope.. you are just gathering info not breaking any rules).
 2. Ideally: understand roles, resources, and the functionality of the application, and the responses of each endpoint. Also, perform tests on each of the endpoints too. (sometimes it is not possible to test all endpoints, this is where the endpoints you’ve marked in step2 come to use)
 3. Headers are not just for manipulation. Certain values for the headers, or missing headers, can lead to security vulnerabilities, so don’t forget to look for those (see the [Secure Headers Project](https://owasp.org/www-project-secure-headers/) by OWASP).
-4. Management endpoints: Sometimes management endpoints are needed to be accessible via the Internet, make sure to check for them and test if they have the strong authentication mechanism, e.g. multi-factor. They can (and should) be exposed via different ports or hosts preferably on a different NIC and restricted subnet. Access to these endpoints should be restriceted by firewall rules or use of access control lists.
+4. Management endpoints: Sometimes management endpoints are needed to be accessible via the Internet, make sure to check for them and test if they have a strong authentication mechanism, e.g. multi-factor. They can (and should) be exposed via different ports or hosts preferably on a different NIC and restricted subnet. Access to these endpoints should be restricted by firewall rules or the use of access control lists.
 
 ## Tools
 
 **_Your Environment (along with all steps):_**
 - [Burp suite](https://portswigger.net/burp/communitydownload) with Extensions like “Authorize”, “JWT Attacker”, “Auto Repeater”, “Turbo intruder”. ⇒ ⇒ _The well-known web proxy_
-- [Postman](https://www.postman.com/) (proxy it throw burp) ⇒ ⇒ API _development and testing platform, with GUI_.
+- [Postman](https://www.postman.com/) (proxy it through burp) ⇒ ⇒ API _development and testing platform, with GUI_.
 - [MindAPI](https://dsopas.github.io/MindAPI/play/) ⇒ ⇒ _API testing framework (similar to OSINT)_
 
 **_Fuzzing and Enumeration tools:_**
