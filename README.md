@@ -1,1 +1,1 @@
-# sec-guids
+# sec-blogs
