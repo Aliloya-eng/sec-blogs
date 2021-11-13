@@ -44,17 +44,17 @@ Since ASP.NET is a compiled application, it has certain debugging features. Micr
 ### SMTP Header Injection
 No validation of the value that falls in the “To” header, it is possible to redirect the letter to another recipient. But that would be too simple and obvious, so validation occurs already at the .Net level. However, if you introduce a new Reply-To header — the answer address, many forms such as “Forgotten Password” often take the sending address from it, thus it is enough to embed carriage return and line feed characters and get the workload.
 
->From: rth@bieberdorf.edu (R.T. Hood)<br>
->To: tmh@immense-isp.com/r/nReply-to:hack@hack.ru<br>
+>From: mail@mail.mail (R.T. Hood)<br>
+>To: mail@mail.mail/r/nReply-to:mail@mail.mail<br>
 >Date: Tue, Mar 18199714:36:14 PST<br>
->Message-Id: <rth031897143614-00000298@mail.bieberdorf.edu><br>
+>Message-Id: <mail@mail.mail><br>
 >...<br>
 >В итоге будет внедрен новый заголовок:<br>
->From: rth@bieberdorf.edu (R.T. Hood)<br>
->To: tmh@immense-isp.com<br>
->Reply-To: hack@hack.ru<br>
+>From: mail@mail.mail (R.T. Hood)<br>
+>To: mail@mail.mail<br>
+>Reply-To: mail@mail.mail<br>
 >Date: Tue, Mar 18199714:36:14 PST<br>
->Message-Id: <rth031897143614-00000298@mail.bieberdorf.edu><br>
+>Message-Id: <mail@mail.mail><br>
 ### Additional .NET-Specific Tricks
 1. Canonicalization attack
    - Using environment variables to represent path - e.g. %windir%notepad.exe
