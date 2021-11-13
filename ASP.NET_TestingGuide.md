@@ -1,3 +1,9 @@
+# ASP.NET Security Testing Guide
+- This guid is intended for ethical activities so please use it for ethical testing only.
+- I wanted this blog to be an exhaustive list of all vulnerabilities and tricks that are mentioned on the web to be of a special focus in ASP.NET applications, I myself have seen some and not all of them. I wrote it as simple and as direct as possible to be available for everyone to use it, dispite the level of experience, and I hope it would be of great help for anyone who needs a starting point to test .NET applicaitons -wether you are a penetration tester or a bug bounty hunter.
+- Any contribution is very appriciated, as well as any advice or comment.
+
+==================================================================================
 ## ENUMERATION
 No need for me to say how important is enumeration! I list herein _additional_ directories and extentions to look for in a .NET application.
 ### Directories
