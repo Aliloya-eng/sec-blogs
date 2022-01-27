@@ -49,6 +49,10 @@ Now that you know what you’re dealing with, and maybe already found some leaks
 3. Headers are not just for manipulation. Certain values for the headers, or missing headers, can lead to security vulnerabilities, so don’t forget to look for those (see the [Secure Headers Project](https://owasp.org/www-project-secure-headers/) by OWASP).
 4. Management endpoints: Sometimes management endpoints are needed to be accessible via the Internet, make sure to check for them and test if they have a strong authentication mechanism, e.g. multi-factor. They can (and should) be exposed via different ports or hosts preferably on a different NIC and restricted subnet. Access to these endpoints should be restricted by firewall rules or the use of access control lists.
 
+## MindMaps
+- https://dsopas.github.io/MindAPI/play/
+- https://raw.githubusercontent.com/muffyhub/Mindmaps/main/IDOR%20Techniques.png
+
 ## Tools
 
 **_Your Environment (along with all steps):_**
